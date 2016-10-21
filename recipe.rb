@@ -8,7 +8,11 @@ class HyperFastCGI < FPM::Cookery::Recipe
   homepage 'https://github.com/xplicit/HyperFastCgi'
   source   "https://github.com/xplicit/HyperFastCgi", :with => :git, :branch => "#{v}"
 
-  build_depends 'autoconf', 'automake', 'libtool', 'make', 'libglib2.0-dev', 'libevent-dev', 'pkg-config', 'mono-complete', 'libevent-dev'
+  build_depends 'autoconf', 'automake', 
+    'libtool', 'make', 'libglib2.0-dev', 
+    'libevent-dev', 'pkg-config', 
+    'mono-complete', 'libevent-dev',
+    'glib-2.0'
 
   def build
     autogen :prefix => prefix
